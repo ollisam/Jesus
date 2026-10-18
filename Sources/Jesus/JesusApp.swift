@@ -3,7 +3,7 @@ import SwiftUI
 
 /// Jesus lives in the menu bar. Drag files anywhere and press Shift to open the quick action menu.
 @main
-struct RecastApp: App {
+struct JesusApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) private var delegate
     @StateObject private var model = AppModel.shared
 

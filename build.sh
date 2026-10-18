@@ -8,7 +8,7 @@ swift build -c release
 APP=build/Jesus.app
 rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
-cp "$(swift build -c release --show-bin-path)/Recast" "$APP/Contents/MacOS/Jesus"
+cp "$(swift build -c release --show-bin-path)/Jesus" "$APP/Contents/MacOS/Jesus"
 cp Support/Info.plist "$APP/Contents/Info.plist"
 
 if [[ ! -f Support/AppIcon.icns ]]; then

@@ -16,7 +16,7 @@ trap 'rm -rf "$TMP"' EXIT
 /usr/bin/openssl req -x509 -newkey rsa:2048 -nodes -days 3650 -subj "/CN=$IDENTITY" \
   -addext "keyUsage=critical,digitalSignature" -addext "extendedKeyUsage=critical,codeSigning" \
   -keyout "$TMP/key.pem" -out "$TMP/cert.pem" 2>/dev/null
-/usr/bin/openssl pkcs12 -export -inkey "$TMP/key.pem" -in "$TMP/cert.pem" -out "$TMP/id.p12" -passout pass:recast
-security import "$TMP/id.p12" -k ~/Library/Keychains/login.keychain-db -P recast -T /usr/bin/codesign >/dev/null
+/usr/bin/openssl pkcs12 -export -inkey "$TMP/key.pem" -in "$TMP/cert.pem" -out "$TMP/id.p12" -passout pass:jesus
+security import "$TMP/id.p12" -k ~/Library/Keychains/login.keychain-db -P jesus -T /usr/bin/codesign >/dev/null
 
 echo "Created \"$IDENTITY\". Now run ./build.sh --install."

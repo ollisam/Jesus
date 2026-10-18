@@ -2,10 +2,10 @@
 import PackageDescription
 
 let package = Package(
-    name: "Recast",
+    name: "Jesus",
     platforms: [.macOS(.v15)],
     targets: [
-        .executableTarget(name: "Recast", path: "Sources/Recast")
+        .executableTarget(name: "Jesus", path: "Sources/Jesus")
     ],
     swiftLanguageModes: [.v5]
 )
