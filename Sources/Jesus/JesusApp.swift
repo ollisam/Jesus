@@ -54,7 +54,7 @@ enum Preferences {
     static let haptics = "playsHaptics"
 
     static func register() {
-        UserDefaults.standard.register(defaults: [sounds: true, haptics: true])
+        UserDefaults.standard.register(defaults: [sounds: false, haptics: true])
     }
 }
 
@@ -72,7 +72,7 @@ private struct SettingsButton: View {
 }
 
 private struct SettingsView: View {
-    @AppStorage(Preferences.sounds) private var playsSounds = true
+    @AppStorage(Preferences.sounds) private var playsSounds = false
     @AppStorage(Preferences.haptics) private var playsHaptics = true
 
     var body: some View {
